@@ -23,7 +23,7 @@ function round(value, decimals) {
 function round_user(value) {
     // Get the number of decimals from the "rounding" box
     let d = Number(document.getElementById("rounding").value)
-    return Math.round(value * 10**d) / 10**d
+    return round(value, d)
 
 }
 
