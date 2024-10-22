@@ -23,8 +23,42 @@ function round(value, decimals) {
 function round_user(value) {
     // Get the number of decimals from the "rounding" box
     let d = Number(document.getElementById("rounding").value)
+    return Math.round(value * 10**d) / 10**d
 
 }
+
+// Calculate the delta
+function delta(a, b) {
+    return a - b
+}
+// Calculate the slope using the delta function
+function slope(x1, y1, x2, y2) {
+
+    let delta_x = delta(x2, x1);
+
+    let delta_y = delta(y2, y1);
+
+    return delta_y/delta_x;
+}
+
+// Calculate the average of 2 numbers
+function average(n1, n2) {
+
+    return (n1 + n2)/2
+}
+
+// Calculate the length of a line segment
+
+function length(x1, y1, x2, y2) {
+
+    let delta_x = delta(x2, x1);
+
+    let delta_y = delta(y2, y1);
+
+    return Math.sqrt((delta_x**2) + (delta_y**2))
+}
+
+
 
 // Calculate the y-value of a parabola from standand form
 function y_quad(a, b, c, x) {
@@ -39,4 +73,5 @@ function zeros() {
 function vertex() {
 
 }
+
 
