@@ -29,7 +29,67 @@
         <!-- Geometry -->
         <div>
             <h4>Part 1 - Geometry</h4>
-            
+            <label for="length">Length:</label>
+            <input id="length" type="number" placeholder="0" autocomplete="off" class="short_number">
+
+            <label for="width">Width:</label>
+            <input id="width" type="number" placeholder="0" autocomplete="off" class="short_number">
+
+            <label for="height">Height:</label>
+            <input id="height" type="number" placeholder="0" autocomplete="off" class="short_number">
+
+            <label for="radius">Radius:</label>
+            <input id="radius" type="number" placeholder="0" autocomplete="off" class="short_number">
+
+
+            <br>
+            <br>
+
+            <div> <button id="rect_prism_volume">Rectangular prism volume</button> The volume of the rectangular prism is: <span id ="volume"></span></div>
+
+            <br>
+
+            <div> <button id="rect_prism_area">Rectangular prism area</button> The surface area of the rectangular prism is: <span id ="area"></span></div>
+
+            <br>
+
+            <div> <button id="sphere_volume_button">Sphere volume</button> The volume of the sphere is: <span id ="sphere_volume"></span></div>
+
+            <br>
+
+            <div> <button id="sphere_area_button">Sphere area</button> The surface area of the rectangular prism is: <span id ="sphere_area"></span></div>
+
+        <hr>
+
+        <div>
+
+            <h2> Find the length or slope of a line</h2>
+
+            <h4> Enter your first coordinate in x1 and y1 and enter your second coordinate in x2 and y2.</h4>
+
+            <label for="x1">x1:</label>
+            <input id="x1" type="number" placeholder="0" autocomplete="off" class="short_number">
+
+            <label for="y1">y1:</label>
+            <input id="y1" type="number" placeholder="0" autocomplete="off" class="short_number">
+
+            <label for="x2">x2:</label>
+            <input id="x2" type="number" placeholder="0" autocomplete="off" class="short_number">
+
+            <label for="y2">y2:</label>
+            <input id="y2" type="number" placeholder="0" autocomplete="off" class="short_number">
+
+            <br>
+            <br>
+
+            <div> <button id="slope_button">Slope</button> The slope of the line is: <span id ="slope"></span></div>
+
+            <br>
+
+            <div> <button id="length_line_button">Line Length</button> The length of the line segment is: <span id ="length_line"></span></div>
+
+        </div>
+
         </div>
         
         <hr>
@@ -48,8 +108,7 @@
             <label for="c">c:</label>
             <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
 
-            <button id="zeros">Find the Zeros</button> 
-            <button id="vertex">Find the Vertex</button>
+
 
             <!-- Output for the zeros or vertex -->
             <div id="quadratic_output"></div>
