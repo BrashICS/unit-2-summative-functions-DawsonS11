@@ -17,6 +17,8 @@ document.getElementById("sphere_volume_button").addEventListener("click", sphere
 document.getElementById("sphere_area_button").addEventListener("click", sphere_area);
 document.getElementById("slope_button").addEventListener("click", slope_user);
 document.getElementById("length_line_button").addEventListener("click", length_user);
+document.getElementById("find_zeros_button").addEventListener("click", zeros);
+// document.getElementById("find_vertex_button").addEventListener("click", vertex;
 /*** Functions ***/
 
 // Round to the nearest `decimals` number of decimals
@@ -105,7 +107,7 @@ function sphere_area() {
     document.getElementById("sphere_area").textContent = `${area} units^3`;
 }
 
-// Calculate the slope of a line inputted by the user
+// Calculate the slope of a line from the input of the user
 function slope_user() {
     let x1 = Number(document.getElementById("x1").value);
     let y1 = Number(document.getElementById("y1").value);
@@ -116,7 +118,7 @@ function slope_user() {
 
     document.getElementById("slope").textContent = `${user_slope}`
 }
-
+// Calculate the length of a line segment from the input of the user
 function length_user() {
     let x1 = Number(document.getElementById("x1").value);
     let y1 = Number(document.getElementById("y1").value);
@@ -127,13 +129,43 @@ function length_user() {
 
     document.getElementById("length_line").textContent = `${user_length}`
 }
+// Calculate the length of a line segment from the input of the user
+function midpoint_user() {
+    let x1 = Number(document.getElementById("x1").value);
+    let y1 = Number(document.getElementById("y1").value);
+    let x2 = Number(document.getElementById("x2").value);
+    let y2 = Number(document.getElementById("y2").value);
+
+    let x_avg = round_user(average(x1, x2))
+    let y_avg = round_user(average(y1, y2))
+
+    document.getElementById("midpoint").textContent = `${x_avg}, ${y_avg}`
+}
+
 // Calculate the y-value of a parabola from standand form
 function y_quad(a, b, c, x) {
 
+    let y = a * (x) **2 + (b * x) + c
+
+    return y
 }
 
 // Determine the zeros of a quadratic using user-inputs for a, b, and c
 function zeros() {
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+    let c = Number(document.getElementById("c").value);
+
+
+    let sqrt_value = Math.sqrt((b ** 2) - 4 * a * c)
+     
+            let first_zero = round_user((-b + sqrt_value) / (2 *a))
+
+            let second_zero = round_user((-b - sqrt_value) / (2 * a))
+
+            document.getElementById("zeros_answer").textContent = `the zeros are ${first_zero} and ${second_zero}`
+
+    return zeros
 }
 
 // Determine the vertex of a quadratic using user-inputs for a, b, and c

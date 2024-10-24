@@ -65,13 +65,18 @@
 
             <h2> Find the length or slope of a line</h2>
 
-            <h4> Enter your first coordinate in x1 and y1 and enter your second coordinate in x2 and y2.</h4>
+            <h4> Coordinate 1</h4>
 
             <label for="x1">x1:</label>
             <input id="x1" type="number" placeholder="0" autocomplete="off" class="short_number">
 
             <label for="y1">y1:</label>
             <input id="y1" type="number" placeholder="0" autocomplete="off" class="short_number">
+
+            <br>
+            <br>
+
+            <h4> Coordinate 2 </h4>
 
             <label for="x2">x2:</label>
             <input id="x2" type="number" placeholder="0" autocomplete="off" class="short_number">
@@ -87,6 +92,10 @@
             <br>
 
             <div> <button id="length_line_button">Line Length</button> The length of the line segment is: <span id ="length_line"></span></div>
+
+            <br>
+
+            <div> <button id="midpoint_button">Midpoint</button> The midpoint of the line segment is: <span id ="midpoint"></span></div>
 
         </div>
 
@@ -108,10 +117,17 @@
             <label for="c">c:</label>
             <input id="c" type="number" value="1" placeholder="1" autocomplete="off" class="short_number">
 
+            <br>
+            <br>
 
+            <button id="find_zeros_button">Find the zeros</button>
+            <button id="find_vertex_button">Find the vertex</button>
+
+            <br>
+            <br>
 
             <!-- Output for the zeros or vertex -->
-            <div id="quadratic_output"></div>
+            <div id="quadratic_output">the zeros are <span id ="quadratic_answer"></div>
         </div>
 
         
