@@ -163,7 +163,7 @@ function zeros() {
 
             let second_zero = round_user((-b - sqrt_value) / (2 * a))
 
-            document.getElementById("zeros_answer").textContent = `the zeros are ${first_zero} and ${second_zero}`
+            document.getElementById("quadratic_answer").textContent = `The zeros are ${first_zero} and ${second_zero}`
 
     return zeros
 }
