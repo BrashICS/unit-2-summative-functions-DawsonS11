@@ -18,7 +18,7 @@ document.getElementById("sphere_area_button").addEventListener("click", sphere_a
 document.getElementById("slope_button").addEventListener("click", slope_user);
 document.getElementById("length_line_button").addEventListener("click", length_user);
 document.getElementById("find_zeros_button").addEventListener("click", zeros);
-// document.getElementById("find_vertex_button").addEventListener("click", vertex;
+document.getElementById("find_vertex_button").addEventListener("click", vertex);
 /*** Functions ***/
 
 // Round to the nearest `decimals` number of decimals
@@ -170,7 +170,16 @@ function zeros() {
 
 // Determine the vertex of a quadratic using user-inputs for a, b, and c
 function vertex() {
+    let a = Number(document.getElementById("a").value);
+    let b = Number(document.getElementById("b").value);
+    let c = Number(document.getElementById("c").value);
+
+    let x = round_user(-(b) / (2 * a))
+
+    let vertex = round_user(y_quad(a, b, c, x))
+
+    document.getElementById("quadratic_answer").textContent = `The vertex is (${x}, ${vertex})`
+
+    return vertex
 
 }
-
-
